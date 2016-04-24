@@ -61,8 +61,8 @@ group :development do
   gem 'capistrano3-unicorn'
   gem 'capistrano-db-tasks', require: false
   gem 'letter_opener'
-  gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
