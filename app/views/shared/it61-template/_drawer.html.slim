@@ -1,0 +1,22 @@
+.layout__drawer.drawer
+  .drawer__title
+    .drawer__logo
+      = image_tag('it61-template/logo.png', class: 'drawer__logo-image', width: 100, height: 100, alt: t(:app_name))
+  .drawer__navigation
+    a.drawer__navigation-link href="#" О проекте
+    a.drawer__navigation-link href="#" События
+    a.drawer__navigation-link href="#" Поддержка
+    .drawer__separator
+    a.drawer__navigation-link href="#"
+      .fa.fa-user
+      | Мои профиль
+    a.drawer__navigation-link href="#"
+      .fa.fa-suitcase
+      | Мои компании
+    a.drawer__navigation-link href="#"
+      .fa.fa-calendar
+      | Мои события
+    .drawer__separator
+    a.drawer__navigation-link href="#"
+      .fa.fa-sign-in
+      | Войти
