@@ -11,16 +11,16 @@ section.facts
     .row
       .col-sm-4.col-xs-6
         .facts__fact
-          .facts__number = User.count
+          .facts__number = @counters[:users]
           | участников сообщества
       .col-sm-4.col-xs-6
         .facts__fact
-          .facts__number Event.count
+          .facts__number = @counters[:events]
           | организованных событий
       .clearfix.visible-xs
       .col-sm-4.col-xs-6
         .facts__fact
-          .facts__number Company.count
+          .facts__number = @counters[:companies]
           | созданных компаний
       .clearfix.visible-sm
       .col-sm-4.col-xs-6

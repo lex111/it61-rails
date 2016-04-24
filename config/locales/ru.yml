@@ -37,8 +37,8 @@ ru:
         few: мероприятия
         many: мероприятий
       company:
-        one: организация
-        few: организации
+        one: компания
+        few: компании
         many: компаний
       company/membership_request:
         one: заявка на членство в организации
