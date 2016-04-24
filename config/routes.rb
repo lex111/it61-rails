@@ -22,13 +22,21 @@ Rails.application.routes.draw do
   resources :companies, except: [:destroy] do
     patch :publish, on: :member
     patch :cancel_publication, on: :member
+    scope module: :companies do
+      resources :membership_requests, only: [:index, :create] do
+        patch :approve, on: :member
+        patch :hide, on: :member
+      end
+      namespace :manage do
+        resources :members, only: [:index, :update, :destroy], shallow: true
+      end
+    end
   end
 
   post '/participate_in_event' => 'event_participations#create'
   delete '/cancel_participation' => 'event_participations#destroy'
 
-  post '/membership_in_company' => 'company_members#create'
-  delete '/cancel_membership' => 'company_members#destroy'
+  delete '/cancel_membership' => 'companies/members#destroy'
 
   root to: redirect('/events')
 

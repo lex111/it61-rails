@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
   before_filter :set_founder, only: :create
   authorize_resource
 
-  has_scope :default_ordered, type: :boolean, allow_blank: true, default: true
+  has_scope :default_ordered, type: :boolean, allow_blank: true
 
   def index
     @companies = apply_scopes(@companies).decorate
@@ -63,6 +63,7 @@ class CompaniesController < ApplicationController
   def company_params
     permitted_attrs = [
       :title,
+      :website,
       :description,
       :logo_image,
       :contacts

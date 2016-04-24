@@ -5,6 +5,7 @@
 
 @import "compass";
 
+@import "bootstrap-sprockets";
 @import 'theme/variables';
 @import 'theme/bootstrap_and_overrides';
 @import 'theme/common_styles';
@@ -12,6 +13,8 @@
 @import 'theme/social_widgets';
 @import 'theme/sidebar';
 @import 'theme/flash_messages';
+@import 'theme/markdown_editor';
+@import 'editable/bootstrap-editable';
 
 @import 'events';
 @import 'companies';

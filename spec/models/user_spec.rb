@@ -11,6 +11,7 @@ describe User do
   it 'pass validation with sms_reminders and phone' do
     subject.sms_reminders = true
     subject.phone = '+71234567890'
+    subject.save
     expect(subject.errors[:phone].size).to eq(0)
   end
 

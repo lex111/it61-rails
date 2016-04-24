@@ -4,7 +4,7 @@ describe EventsController, type: :controller do
   context 'POST create' do
     it 'unlogged user cannot create event' do
       event_attrs = FactoryGirl.attributes_for(:event)
-      expect { post :create, event: event_attrs }.to raise_error(CanCan::AccessDenied)
+      expect { post :create, event: event_attrs }.to_not change(Event, :count)
     end
 
     it 'member can create event' do
