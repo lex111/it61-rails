@@ -1,4 +1,11 @@
 class UserSessionsController < ApplicationController
+  respond_to :html
+
+  def new
+    # На странице логина нужно отобразить форму регистрации
+    respond_with @user = User.new
+  end
+
   def create
    if @user = login(params[:email], params[:password], params[:remember_me])
       redirect_back_or_to(root_path)

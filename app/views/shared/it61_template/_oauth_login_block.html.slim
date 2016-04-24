@@ -1,0 +1,5 @@
+.auth__social
+  h4.auth__social-title = t('.social_providers')
+  - [:facebook, :vk, :github, :google].each do |provider|
+    = link_to auth_at_provider_path(provider: provider), class: "auth__social-link btn btn-#{provider}"
+      = fa_icon(provider)

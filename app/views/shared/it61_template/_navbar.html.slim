@@ -1,0 +1,17 @@
+.navbar-header
+  button.navbar-toggle.collapsed type='button' aria-expanded='false'
+    span.fa.fa-bars aria-hidden='true'
+
+.collapse.navbar-collapse
+  ul.nav.navbar-nav.navbar-left
+    = active_link_to Event.model_name.human(count: 2), events_path, wrap_tag: :li
+    = active_link_to Company.model_name.human(count: 2), companies_path, wrap_tag: :li
+    li: a href="#" События
+    = active_link_to t('.about'), page_path(:about), active_disable: true, wrap_tag: :li
+    li: a href="#" Поддержка
+  ul.nav.navbar-nav.navbar-right
+    li
+      - if current_user
+        = link_to current_user.login, user_profile_path(current_user.id)
+      - else
+        = active_link_to t('.login'), new_user_session_path

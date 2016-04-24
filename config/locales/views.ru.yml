@@ -42,6 +42,13 @@ ru:
         create: Добавить организацию
 
   shared:
+    it61_template:
+      navbar:
+        login: Вход
+        about: О сайте
+      oauth_login_block:
+        social_providers: через соцсети
+
     sidebar:
       login: Вход
       register: Регистрация
@@ -50,7 +57,6 @@ ru:
       events: Мероприятия
       companies: Компании
       donations: Пожертвования
-      about: О сайте
       members: Личности
       add_event_button_title: Добавить мероприятие
       add_company_button_title: Добавить организацию
@@ -60,7 +66,7 @@ ru:
       hashtag: "Хештег: #it61"
       social_links: "Мы есть в соцсетях:"
     oauth_login_block:
-      social_providers: Вход через соц. сети
+      social_providers: через соцсети
     disqus:
       noscript_message: Похоже, в вашем броузере отключен JavaScript. Для просмотра и написание комментариев JavaScript должен быть включен.
 
@@ -77,6 +83,8 @@ ru:
       remember_me: Запомнить меня
       submit: Войти
       email_pass_login: Вход по почте-паролю
+      forgot_password: Забыли пароль?
+      submit_title: Зарегистрироваться
     create:
       login_failed_message: Неверный пароль или пользователь не существует.
   user_profiles:

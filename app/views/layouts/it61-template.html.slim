@@ -3,22 +3,20 @@ html
   head = render 'head'
 
   body
-    .layout
-
+    .layout class=layout_class
       nav.navbar.navbar-deafult.navbar-fixed-top
         .container
-          = render partial: 'shared/it61-template/navbar'
-          = render partial: 'shared/it61-template/drawer'
+          = render partial: 'shared/it61_template/navbar'
+          = render partial: 'shared/it61_template/drawer'
 
-      / TODO: Add flashes wrapper
-      .layout__content
-        = yield
+      / TODO Контейнер для флешей перенесен из старой версии оформления без изменений
+      / Нужен корректный маркап и стили.
+      .container-fluid
+        .flash-messages
+          - flash.each do |type, message|
+            div class="alert alert-#{type} alert-dismissable"
+              button type='button' class='close' data-dismiss='alert' aria-hidden='true' &times;
+              == message
+
+      .layout__content = yield
       .layout__fog
-
-    script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"
-    script src="https://code.jquery.com/jquery-2.2.0.min.js"
-    script [
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-      crossorigin="anonymous"
-    ]

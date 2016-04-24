@@ -26,4 +26,12 @@ module ApplicationHelper
   def xeditable?(object = nil)
     can?(:edit, object)
   end
+
+  def layout_class
+    case controller_name
+    when 'user_sessions' || 'registrations'
+      'register__layout'
+    end
+  end
+
 end

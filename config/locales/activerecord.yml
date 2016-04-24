@@ -1,0 +1,67 @@
+ru:
+  activerecord:
+    models:
+      user:
+        one: пользователь
+        few: пользователи
+        many: пользоатели
+      event:
+        one: мероприятие
+        few: мероприятия
+        many: мероприятий
+      company:
+        one: компания
+        few: компании
+        many: компаний
+      company/membership_request:
+        one: заявка на членство в организации
+        few: Заявок на членство в организации
+        many: Заявки на членство в организации
+      company/member:
+        one: Сотрудник
+        few: Сотрудников
+        many: Сотрудники
+    attributes:
+      user:
+        email: E-mail
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        first_name: Имя
+        last_name: Фамилия
+        bio: Обо мне
+        avatar_image: Аватар
+        phone: Телефон
+        subscribed: Получать новости сайта
+        sms_reminders: SMS-напоминания
+        email_reminders: Email-напоминания
+        participant_notifications_only: Уведомлять только о тех событиях, на которые я иду
+      event:
+        title: Название
+        published: Мероприятие опубликовано
+        published_at: Дата публикации
+        description: Описание
+        started_at: Дата начала
+        title_image: Титульное изображение
+        participants: Участники
+        place: Место проведения
+      company:
+        title: Название
+        permalink: Понятная ссылка
+        website: Вебсайт
+        description: Описание
+        contacts: Контактная информация
+        members: Сотрудники
+        logo_image: Логотип
+      company/membership_request:
+        user: Пользователь
+        approved: Подтверждена
+        created_at: Дата
+      company/member:
+        roles: Роли
+    errors:
+      models:
+        user:
+          attributes:
+            phone:
+              improbable_phone: 'Пожалуйста, введите номер в международном формате, например: +7 928 1234567'
+              blank: Необходимо указать номер мобильного телефона, если вы хотите получать SMS-напоминания о мероприятиях

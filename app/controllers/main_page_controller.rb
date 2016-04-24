@@ -1,6 +1,4 @@
 class MainPageController < ApplicationController
-  layout 'it61-template'
-
   before_filter :fetch_counters
 
   def show

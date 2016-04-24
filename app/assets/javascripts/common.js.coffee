@@ -1,5 +1,4 @@
 $ ->
-  $('.admin-info i.fa').tooltip()
-  $('li.participant a').tooltip()
+  $('[data-toggle="tooltip"]').tooltip(placement: 'bottom')
 
   $('.editable').editable()

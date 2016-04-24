@@ -1,34 +1,98 @@
-.events-index
-  .page-header.clearfix
-    .actions.pull-right
-      => link_to events_path(format: :rss), target: '_blank', data: { toggle: :tooltip, placement: :left },
-                 title: t('.rss_link_title')
-        i.fa.fa-rss
-      = link_to ENV['CALENDAR_URL'], target: '_blank', data: { toggle: :tooltip, placement: :left },
-                title: t('.google_calendar_link_title')
-        i.fa.fa-calendar
-    h1.pull-left = title Event.model_name.human(count: 2)
+/ .events-index
+/   .page-header.clearfix
+/     .actions.pull-right
+/       => link_to events_path(format: :rss), target: '_blank', data: { toggle: :tooltip, placement: :left },
+/                  title: t('.rss_link_title')
+/         i.fa.fa-rss
+/       = link_to ENV['CALENDAR_URL'], target: '_blank', data: { toggle: :tooltip, placement: :left },
+/                 title: t('.google_calendar_link_title')
+/         i.fa.fa-calendar
+/     h1.pull-left = title Event.model_name.human(count: 2)
 
-  .events
-    - @events.each do |event|
+/   .events
+/     - @events.each do |event|
 
-      = render event
+/       = render event
 
-      - if event.id == @render_separator_after_id
-        .upcoming-separator
-          .type-label
-            .arrow:h3
-              i.fa.fa-arrow-up
-            h3
-              = t('.upcoming_events')
-          hr
-          .type-label
-            .arrow:h3
-              i.fa.fa-arrow-down
-            h3
-              = t('.past_events')
+/       - if event.id == @render_separator_after_id
+/         .upcoming-separator
+/           .type-label
+/             .arrow:h3
+/               i.fa.fa-arrow-up
+/             h3
+/               = t('.upcoming_events')
+/           hr
+/           .type-label
+/             .arrow:h3
+/               i.fa.fa-arrow-down
+/             h3
+/               = t('.past_events')
 
-    .text-center
-      = link_to_next_page @events, t('.show_more'), class: 'btn btn-primary js-lnk-next-page', remote: true, 'data-type' => 'html'
+/     .text-center
+/       = link_to_next_page @events, t('.show_more'), class: 'btn btn-primary js-lnk-next-page', remote: true, 'data-type' => 'html'
 
 
+
+header.layout__page-header
+  .container
+    h1 Ближайшие события
+
+.section-nav
+  .container
+    ul.section-nav__list
+      li.section-nav__toggle
+        span.fa.fa-chevron-down
+      li.active: span Ближайшие события
+      li: a href="#" Интерфейсы
+      li: a href="#" Тестирование
+      li: a href="#" Мобильная разработка
+
+section.events
+  .container
+    .row
+      .col-md-6
+        .card
+          img.card__poster [
+            src="images/meetup1.png"
+          ]
+          .card__content
+            .card__summary
+              .card__title Восьмой Front-end Meetup
+              .card__schedule
+                span.card__date 25 августа 2016
+                | &nbsp;
+                span.card__time 18:00
+              .card__place Гагарина,1, ДГТУ, 7 корпус
+            .card__actions
+              .card__link.btn.btn-default Подробнее
+
+      .col-md-6
+        .card
+          img.card__poster [
+            src="images/meetup2.png"
+          ]
+          .card__content
+            .card__summary
+              .card__title Восьмой Front-end Meetup
+              .card__schedule
+                .card__date 25 августа 2016
+                .card__time 18:00
+              .card__place Гагарина,1, ДГТУ, 7 корпус
+            .card__actions
+              .card__link.btn.btn-default Подробнее
+
+      .col-md-6
+        .card
+          img.card__poster [
+            src="images/meetup1.png"
+          ]
+          .card__content
+            .card__summary
+              .card__title Восьмой Front-end Meetup
+              .card__schedule
+                span.card__date 25 августа 2016
+                | &nbsp;
+                span.card__time 18:00
+              .card__place Гагарина,1, ДГТУ, 7 корпус
+            .card__actions
+              .card__link.btn.btn-default Подробнее

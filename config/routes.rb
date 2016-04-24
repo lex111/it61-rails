@@ -40,5 +40,5 @@ Rails.application.routes.draw do
 
   root to: 'main_page#show'
 
-  get ':id' => 'high_voltage/pages#show', as: :page
+  get ':id' => 'high_voltage/pages#show', as: :page, format: false
 end
