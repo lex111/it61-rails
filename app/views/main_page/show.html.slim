@@ -1,0 +1,43 @@
+- title t(:app_name)
+
+.hero
+  .container
+    .hero__logo
+      = image_tag('it61-template/logo.png', class: 'hero__logo-image', alt: t(:app_name))
+    h1.hero__title = t(:app_name)
+
+section.facts
+  .container
+    .row
+      .col-sm-4.col-xs-6
+        .facts__fact
+          .facts__number = User.count
+          | участников сообщества
+      .col-sm-4.col-xs-6
+        .facts__fact
+          .facts__number Event.count
+          | организованных событий
+      .clearfix.visible-xs
+      .col-sm-4.col-xs-6
+        .facts__fact
+          .facts__number Company.count
+          | созданных компаний
+      .clearfix.visible-sm
+      .col-sm-4.col-xs-6
+        .facts__fact
+          .facts__number 56
+          | открытых вакансий
+      .clearfix.visible-xs
+      .col-sm-4.col-xs-6
+        .facts__fact
+          .facts__number 102
+          | проекта
+      .col-sm-4.col-xs-6
+        .facts__fact
+          .facts__number 69
+          | человек в Slack онлайн
+
+section.manifesto
+  .container
+    .row
+      = render partial: 'manifest'

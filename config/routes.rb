@@ -38,7 +38,7 @@ Rails.application.routes.draw do
 
   delete '/cancel_membership' => 'companies/members#destroy'
 
-  root to: redirect('/events')
+  root to: 'main_page#show'
 
   get ':id' => 'high_voltage/pages#show', as: :page
 end

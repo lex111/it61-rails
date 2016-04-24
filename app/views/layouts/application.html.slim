@@ -5,10 +5,6 @@ html lang='ru'
     meta http-equiv='X-UA-Compatible' content='IE=edge'
     meta name='viewport' content='width=device-width, initial-scale=1'
 
-    = display_meta_tags site: t(:app_name), separator: '–', reverse: true,
-                        og: { site_name: t(:app_name), url: request.url,
-                              title: :title, description: :description }
-
     = auto_discovery_link_tag(:rss, events_path(format: :rss))
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
