@@ -1,0 +1,47 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+.hero {
+  min-height: 800px;
+  padding: 100px 0;
+  background: asset-url('it61-template/hero.jpg') center no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $grid-float-breakpoint-max) {
+    display: block;
+    background-attachment: fixed;
+  }
+
+  &__logo {
+    margin-top: -60px;
+    text-align: center;
+
+    @media (min-width: $grid-float-breakpoint-max) {
+      margin-top: 0;
+    }
+  }
+
+  &__logo-image {
+    $size: 200px;
+    width: $size;
+    height: $size;
+    text-align: center;
+
+    @media (min-width: $grid-float-breakpoint-max) {
+      $size: 240px;
+      width: $size;
+      height: $size;
+      margin-top: -10px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: normal;
+  }
+}

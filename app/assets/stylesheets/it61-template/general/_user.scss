@@ -1,0 +1,17 @@
+.user-avatar {
+  display: inline-block;
+
+  &__photo {
+    border-radius: 50%;
+
+    $size: 140px;
+    width: $size;
+    height: $size;
+  }
+
+  &--small &__photo {
+      $size: 60px;
+      width: $size;
+      height: $size;
+  }
+}

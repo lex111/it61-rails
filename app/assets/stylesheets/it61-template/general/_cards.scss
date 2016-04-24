@@ -1,0 +1,133 @@
+.card {
+  @include shadow-2dp();
+  $title-height: 240px;
+
+  background-color: #fff;
+  border-radius: $border-radius-large;
+  margin-bottom: 40px;
+  overflow: hidden;
+
+  @media (min-width: $screen-xs-min) {
+    height: 200px + 2 * $padding-base-vertical;
+  }
+
+  &__block-link {
+    display: block;
+    color: inherit;
+
+    &:hover,
+    &:active {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__poster {
+    $poster-size: $title-height - 2 * $padding-large-vertical;
+    display: block;
+    width: 100%;
+    // margin-right: $padding-large-horizontal;
+
+    @media (min-width: $screen-xs-min) {
+      float: left;
+      width: $poster-size;
+      height: $poster-size;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &__title {
+    @extend .h3;
+    margin: 0;
+    flex-grow: 1;
+    // align-self: flex-end;
+    // display: flex;
+    // flex-direction: column-reverse;
+    // padding: 0 $padding-base-horizontal $padding-base-vertical;
+    padding-bottom: $padding-base-vertical;
+    color: #000;
+    background-position: center;
+    background-size: cover;
+    border-radius: $border-radius-large $border-radius-large 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &:hover &__title:before {
+    background-color: transparentize(black, 0.35);
+  }
+
+  &__title-text {
+    position: relative;
+  }
+
+
+  &:hover &__summary {
+    transform: translateY(0);
+  }
+
+  &__summary {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    padding: $padding-large-vertical $padding-large-horizontal;
+  }
+
+  &__actions {
+    width: 100%;
+    padding: $padding-large-vertical $padding-base-horizontal;
+    // margin-top: $padding-base-vertical;
+    border-top: 1px $gray-lighter solid;
+    text-transform: uppercase;
+    color: red;
+  }
+
+  &__schedule {
+    margin: 0;
+    width: 100%;
+    padding-bottom: $padding-base-vertical;
+    color: $gray;
+  }
+
+  &__date {
+    display: inline;
+  }
+
+  &__time {
+    display: inline;
+  }
+
+  &__place {
+    color: $gray;
+  }
+
+  &__link {
+    @media (max-width: $screen-xs) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__participants {
+    border-top: 1px $gray-lighter solid;
+    padding: 16px $padding-base-horizontal 0;
+  }
+
+  &__participant-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 60px;
+    padding-top: $padding-large-vertical;
+    box-sizing: content-box;
+    overflow: hidden;
+  }
+
+}

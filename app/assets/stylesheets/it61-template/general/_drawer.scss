@@ -1,0 +1,34 @@
+.drawer {
+  &__title {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  &__separator {
+    height: 1px;
+    margin: 8px 0;
+    background-color: #dcdcdc;
+  }
+
+  &__navigation {
+    margin: 0;
+    padding: 16px 0;
+  }
+
+  &__navigation-link {
+    display: block;
+    padding: 15px 40px;
+    color: $navbar-default-link-color;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: $navbar-default-link-hover-color;
+      background-color: $navbar-default-link-active-bg;
+    }
+
+    & .fa {
+      width: 20px;
+    }
+  }
+}

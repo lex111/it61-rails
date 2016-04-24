@@ -34,7 +34,7 @@ module It61Rails
     ENV['APP_URL'] = app_url
 
     config.action_controller.asset_host = ENV['APP_URL']
-    config.assets.precompile += %w(editor.js)
+    config.assets.precompile += %w(editor.js it61-template.css)
     config.responders.flash_keys = [:success, :error]
 
     default_url_options = {

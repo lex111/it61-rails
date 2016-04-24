@@ -1,0 +1,88 @@
+$slack-btn-height: 32px;
+
+.auth {
+  background: #fff;
+  margin-top: 100px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+
+  &__title {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  &__social {
+    margin: 5px 0 0 0;
+  }
+
+  &__social-title {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 7px 0;
+  }
+
+  &__social-link {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0 10px 0 0;
+    text-align: center;
+    color: #fff;
+
+    .fa {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  &__slack {
+    margin-top: 15px;
+  }
+
+  &__slack-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    vertical-align: top;
+    line-height: $slack-btn-height;
+  }
+
+  &__slack-btn {
+    display: inline-block;
+    width: 100px;
+    height: $slack-btn-height;
+    background: transparent url('/images/slack-full.svg') no-repeat center center;
+    background-size: contain;
+    margin: 0 0 0 10px;
+    vertical-align: top;
+  }
+
+  &__form {
+    margin: 15px 0 15px 0;
+  }
+
+  &__form-title {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 15px 0;
+  }
+}
+
+.login,
+.signup {
+  padding: 0 5%;
+  margin-top: 12px;
+}
+
+.signup {
+  border-left: 1px solid #ccc;
+}
+
+@media (max-width: $screen-sm-max) {
+  .signup {
+    border-left: 0;
+    margin-top: 25px;
+  }
+}

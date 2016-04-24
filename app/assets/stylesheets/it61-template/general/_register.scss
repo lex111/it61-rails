@@ -1,0 +1,74 @@
+.register {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+
+  font-size: 16px;
+  text-align: center;
+
+  &__social {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  &__social-link {
+    width: 140px;
+    margin: 0 7px 5px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__slack {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 44px;
+    background: url('../images/slack.png') 4px center no-repeat;
+    background-size: 40px;
+  }
+
+  &__title {
+      text-align: center;
+  }
+
+  &__card {
+      background-color: #fff;
+      border-radius: 8px;
+      margin: 20px 0;
+      min-height: 400px;
+      padding: 30px;
+
+      & label {
+          margin-top: 1em;
+      }
+  }
+
+  &__form {
+    text-align: left;
+    margin-bottom: 1em;
+  }
+
+  &__submit {
+    margin-top: 30px;
+  }
+
+  &__forgot {
+    text-align: center;
+  }
+}
+
+.register__layout {
+  background: asset-url('it61-template/hero.jpg') center no-repeat;
+  background-size: cover;
+
+  & > .register {
+    margin-top: 7%;
+  }
+}

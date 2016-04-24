@@ -1,0 +1,120 @@
+$font-family-sans-serif: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-line-height: 1.4;
+
+$navbar-height: 64px;
+$nav-link-padding: 10px 24px;
+
+$bg-blue: #4F8ECB;
+
+$icon-gap: 10px;
+
+$transition-default-duration: 0.24s;
+$transition-default-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+
+$border-radius-base:        3px !default;
+$border-radius-large:       3px !default;
+$border-radius-small:       3px !default;
+
+$btn-default-border: transparent;
+
+$btn-default-color: #337ab7;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$font-color:                 #424242 !default;
+$fill-font-color:            rgba(255, 255, 255, 0.7);
+
+$none:                       0   !default;
+$border-thin:                1px !default;
+$border-thick:               2px !default;
+
+$white-color:                #FFFFFF !default;
+$white-bg:                   #FFFFFF !default;
+
+$smoke-bg:                   #F5F5F5 !default;
+$pale-bg:                    #FFFCF5 !default;
+$medium-pale-bg:             #F1EAE0 !default;
+
+$black-bg:                   rgba(30,30,30,.97) !default;
+
+$black-color:                #333333 !default;
+$black-hr:                   #444444 !default;
+
+$light-gray:                 #E3E3E3 !default;
+$medium-gray:                #DDDDDD !default;
+$dark-gray:                  #9A9A9A !default;
+
+$gray-input-bg:              #fffcf5 !default;
+$danger-input-bg:            #FFC0A4 !default;
+$success-input-bg:           #ABF3CB !default;
+$other-medium-gray:          #A49E93 !default;
+$transparent-bg:             transparent !default;
+
+$default-color:              #66615B !default;
+$default-bg:                 #66615B !default;
+$default-states-color:       #403D39 !default;
+
+$primary-color:              #7A9E9F !default;
+$primary-bg:                 #7A9E9F !default;
+$primary-states-color:       #427C89 !default;
+
+$success-color:              #7AC29A !default;
+$success-bg:                 #7AC29A !default;
+$success-states-color:       #42A084 !default;
+
+$info-color:                 #68B3C8 !default;
+$info-bg:                    #68B3C8 !default;
+$info-states-color:          #3091B2 !default;
+
+$warning-color:              #F3BB45 !default;
+$warning-bg:                 #F3BB45 !default;
+$warning-states-color:       #BB992F !default;
+
+
+$danger-color:               #EB5E28 !default;
+$danger-bg:                  #EB5E28 !default;
+$danger-states-color:        #B33C12 !default;
+
+$link-disabled-color:        #666666 !default;
+
+
+/*      light colors - used for select dropdown         */
+
+$light-blue:                 rgba($primary-color, .2);
+$light-azure:                rgba($info-color, .2);
+$light-green:                rgba($success-color, .2);
+$light-orange:               rgba($warning-color, .2);
+$light-red:                  rgba($danger-color, .2);
+
+
+//== Components
+//
+$padding-base-vertical:         7px !default;
+$padding-base-horizontal:       18px !default;
+
+// $padding-round-vertical:        9px !default;
+// $padding-round-horizontal:     18px !default;
+//
+// $padding-simple-vertical:      10px !default;
+// $padding-simple-horizontal:    18px !default;
+
+$padding-large-vertical:       12px !default;
+$padding-large-horizontal:     16px !default;
+
+// $padding-small-vertical:        4px !default;
+// $padding-small-horizontal:     10px !default;
+
+// $padding-xs-vertical:           2px !default;
+// $padding-xs-horizontal:         5px !default;
+
+// $padding-label-vertical:        2px !default;
+// $padding-label-horizontal:     12px !default;
+
+// padding for links inside dropdown menu
+// $padding-dropdown-vertical:     10px !default;
+// $padding-dropdown-horizontal:   15px !default;
+
+// $margin-large-vertical:        30px !default;
+// $margin-base-vertical:         15px !default;

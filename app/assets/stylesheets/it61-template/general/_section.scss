@@ -1,0 +1,10 @@
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $grid-float-breakpoint-max) {
+    $vertical-padding: 80px;
+    padding-top: $vertical-padding;
+    padding-bottom: $vertical-padding;
+  }
+}

@@ -1,0 +1,91 @@
+.navbar {
+  margin-bottom: 0;
+  color: white;
+  border: none;
+  transition: background-color $transition-default-duration $transition-default-function;
+
+  &-filled {
+    color: $text-color;
+    background-color: $body-bg;
+  }
+
+  &-toggle {
+    position: absolute;
+    left: 0;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 20px;
+    line-height: $navbar-height;
+    font-size: 21px;
+    border: none;
+    color: inherit;
+  }
+
+  &-left {
+    margin-left: -20px;
+  }
+
+  & .nav > li {
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0 5px;
+
+    &:after {
+      $border-width: 3px;
+      position: relative;
+      z-index: 10;
+      display: block;
+      margin: -($border-width) auto 0;
+      width: 0;
+      height: $border-width;
+      transition: width $transition-default-duration $transition-default-function;
+      background-color: white;
+      content: '';
+      border-radius: $border-radius-base;
+    }
+
+    &.active:after,
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  & .nav > li.active {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &-filled .nav > li {
+    &:after {
+      background-color: $brand-primary;
+    }
+  }
+
+  .nav > li > a {
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+  }
+
+  .nav > li > .navbar-text {
+    display: block;
+    float: none;
+  }
+
+  &-filled .nav > li > a,
+  &-filled .nav > li > .navbar-text {
+    transition: color $transition-default-duration $transition-default-function;
+    color: $text-color;
+  }
+}
+
+.navbar-fixed-top {
+  z-index: 1;
+}

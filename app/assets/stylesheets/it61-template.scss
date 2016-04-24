@@ -1,0 +1,12 @@
+/*
+ *= require rails_bootstrap_forms
+ *= require_self
+ */
+
+@import 'theme/bootstrap_and_overrides';
+
+@import "it61-template/variables";
+@import "it61-template/mixins";
+
+@import "it61-template/general/index";
+@import "it61-template/landing";
