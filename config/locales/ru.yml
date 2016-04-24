@@ -6,6 +6,8 @@ ru:
       date_time_full: "%d %B %Y, %H:%M"
       date_digits: "%d.%m.%y"
       date_time_digits: "%d.%m.%y %H:%M"
+      date_only: "%d %B %Y"
+      time_only: "%H:%M"
 
   misc:
     day:

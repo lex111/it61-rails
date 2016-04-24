@@ -1,36 +1,52 @@
-.event.panel.panel-default
-  .panel-heading
-    .pull-right
-      - if can? :edit, event
-        = link_to edit_event_path(event), class: 'btn btn-xs btn-default' do
-          i.fa.fa-pencil
-    h3.panel-title
-      - if can? :edit, event
-        = render partial: 'admin_info', object: event, as: :event
-      = link_to event.title, event_path(event)
-      | &nbsp;
-  .panel-body
-    .row
-      .col-sm-4
-        = link_to event_path(event) do
-          .image-container = image_tag event.title_image.square_500.url, alt: event.title
-        = render partial: 'participate_block', object: event, as: :event
-      .col-sm-8
-        .event-date: p
-          = link_to event_path(event, format: :ics)
-            i.fa.fa-fw.fa-calendar'
-            = l event.started_at, format: :date_time_full
-        - if event.place.present?
-          .event-place: p
-            i.fa.fa-fw.fa-map-marker'
-            = event.place
-        hr
-        = markdown event.description
+/ .event.panel.panel-default
+/   .panel-heading
+/     .pull-right
+/       - if can? :edit, event
+/         = link_to edit_event_path(event), class: 'btn btn-xs btn-default' do
+/           i.fa.fa-pencil
+/     h3.panel-title
+/       - if can? :edit, event
+/         = render partial: 'admin_info', object: event, as: :event
+/       = link_to event.title, event_path(event)
+/       | &nbsp;
+/   .panel-body
+/     .row
+/       .col-sm-4
+/         = link_to event_path(event) do
+/           .image-container = image_tag event.title_image.square_500.url, alt: event.title
+/         = render partial: 'participate_block', object: event, as: :event
+/       .col-sm-8
+/         .event-date: p
+/           = link_to event_path(event, format: :ics)
+/             i.fa.fa-fw.fa-calendar'
+/             = l event.started_at, format: :date_time_full
+/         - if event.place.present?
+/           .event-place: p
+/             i.fa.fa-fw.fa-map-marker'
+/             = event.place
+/         hr
+/         = markdown event.description
 
-  - if event.participants.any?
-    .panel-footer
-      .participants
-        h4
-          =' Event.human_attribute_name(:participants)
-          small = event.participants.count
-        = render partial: 'participants_block', object: event, as: :event
+/   - if event.participants.any?
+/     .panel-footer
+/       .participants
+/         h4
+/           =' Event.human_attribute_name(:participants)
+/           small = event.participants.count
+/         = render partial: 'participants_block', object: event, as: :event
+
+
+.col-md-6
+  .card
+    / TODO: сделать версию square_220, сгенерировать картинки этой версии для всех мероприятий
+    = image_tag event.title_image.url(:square_500), class: 'card__poster', alt: event.title
+    .card__content
+      .card__summary
+        .card__title = event.title
+        .card__schedule
+          span.card__date = l(event.started_at, format: :date_only)
+          | &nbsp;
+          span.card__time = l(event.started_at, format: :time_only)
+        .card__place = event.place
+      .card__actions
+        .card__link.btn.btn-default = link_to t('.more'), event_path(event)

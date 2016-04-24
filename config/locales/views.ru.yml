@@ -115,6 +115,7 @@ ru:
       title: Привязать дополнительные аккаунты
   events:
     index:
+      title: Ближайшие события
       add_event_button_title: Добавить мероприятие
       rss_link_title: Лента мероприятий в формате RSS
       google_calendar_link_title: Google-календарь мероприятий
@@ -135,7 +136,7 @@ ru:
     cancel_publication:
       success_message: Событие не будет отображаться в ленте
     event:
-      more: Подробнее...
+      more: Подробнее
     participate_block:
       participate_submit_title: Участвовать
       cancel_participation_submit_title: Отказаться от участия

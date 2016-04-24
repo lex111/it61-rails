@@ -35,7 +35,7 @@
 
 header.layout__page-header
   .container
-    h1 Ближайшие события
+    h1 = title t('.title')
 
 .section-nav
   .container
@@ -50,49 +50,5 @@ header.layout__page-header
 section.events
   .container
     .row
-      .col-md-6
-        .card
-          img.card__poster [
-            src="images/meetup1.png"
-          ]
-          .card__content
-            .card__summary
-              .card__title Восьмой Front-end Meetup
-              .card__schedule
-                span.card__date 25 августа 2016
-                | &nbsp;
-                span.card__time 18:00
-              .card__place Гагарина,1, ДГТУ, 7 корпус
-            .card__actions
-              .card__link.btn.btn-default Подробнее
-
-      .col-md-6
-        .card
-          img.card__poster [
-            src="images/meetup2.png"
-          ]
-          .card__content
-            .card__summary
-              .card__title Восьмой Front-end Meetup
-              .card__schedule
-                .card__date 25 августа 2016
-                .card__time 18:00
-              .card__place Гагарина,1, ДГТУ, 7 корпус
-            .card__actions
-              .card__link.btn.btn-default Подробнее
-
-      .col-md-6
-        .card
-          img.card__poster [
-            src="images/meetup1.png"
-          ]
-          .card__content
-            .card__summary
-              .card__title Восьмой Front-end Meetup
-              .card__schedule
-                span.card__date 25 августа 2016
-                | &nbsp;
-                span.card__time 18:00
-              .card__place Гагарина,1, ДГТУ, 7 корпус
-            .card__actions
-              .card__link.btn.btn-default Подробнее
+      - @events.each do |event|
+        = render event
