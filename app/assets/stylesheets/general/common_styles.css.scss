@@ -1,5 +1,7 @@
-$btn-default-color: #F6F6F9;
+$btn-default-color: #ededed;
 $btn-primary-color: #327AB5;
+$navbar-color : #fff;
+$field-association-color:  #83bbed;
 
 * {
   padding: 0;
@@ -15,7 +17,7 @@ $btn-primary-color: #327AB5;
 //navigation
 .top-navbar { 
   min-height: 70px;
-  background-color: $nav-back;
+  background-color: $navbar-color;
   //box-shadow: 3px 0 10px 2px;
 }
 
@@ -45,8 +47,9 @@ $btn-primary-color: #327AB5;
   text-decoration: none;
   &-primary {
     background-color: $btn-primary-color;
-    color: $btn-default-color;
+    color: #F6F6F9;
   }
+  
   &-primary:hover {
     background-color: $btn-default-color;
     color: $btn-primary-color;
@@ -63,3 +66,4 @@ $btn-primary-color: #327AB5;
     text-decoration: none;
   }
 }
+

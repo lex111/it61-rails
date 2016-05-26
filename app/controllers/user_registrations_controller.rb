@@ -17,6 +17,10 @@ class UserRegistrationsController < ApplicationController
     end
   end
 
+  def last_step
+    respond_with @user = User.new
+  end
+
   private
 
   def user_params

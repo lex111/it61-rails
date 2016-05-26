@@ -1,0 +1,33 @@
+.login-full-bg
+.col-sm-6.col-sm-offset-3.col-md-6.col-md-offset-3.register-container
+	.title 
+		h2 Осталось совсем чуть-чуть!
+		p Пожалуйста, проверьте всю информацию<br> для завершения регистрации 
+	= bootstrap_form_for @user, url: user_registration_path(@user), html: { autocomplete: 'off', autocorrect: 'off'} do |f|
+		.row
+			.col-sm-6
+				= f.text_field :first_name, hide_label: true, placeholder: t('.first_name')
+				= f.text_field :last_name, hide_label: true, placeholder: t('.last_name')
+			.col-sm-1.field-curve
+				.field-curve-long 
+			.col-sm-5.field-curve-long-text = t('.name_hint')
+		.row
+			.col-sm-6	
+				= f.text_field :phone, hide_label: true, placeholder: t('.phone')
+			.col-sm-1.field-curve
+				.field-curve-short 
+			.col-sm-5.field-curve-text = t('.phone_hint')
+		.row
+			.col-sm-6	
+				= f.text_field :email, hide_label: true, placeholder: t('.email')
+			.col-sm-1.field-curve
+				.field-curve-short 
+			.col-sm-5.field-curve-text = t('.email_hint')
+		= f.text_area :bio, rows: 3, hide_label: true, placeholder: t('.bio')
+		.row
+			.pull-right
+				.row
+					.col-xs-6.col-sm-offset-1.col-sm-4.col
+						= f.submit class: 'custom-btn custom-btn-primary ', value: t('.submit')
+					.col-xs-6.col-sm-7
+						= button_to t('.cancel'), url_for, class: 'custom-btn custom-btn-default'

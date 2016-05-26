@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'oauth/callback' => 'oauths#callback'
   get 'oauth/:provider' => 'oauths#oauth', as: :auth_at_provider
+  get 'user_registration/last_step', to: 'user_registrations#last_step'
 
   # Список пользователей, публичные профили и редактирование профилей
   resources :user_profiles, path: 'users', only: [:index, :show, :edit, :update, :destroy]
