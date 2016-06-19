@@ -1,13 +1,20 @@
 $btn-default-color: #ededed;
 $btn-primary-color: #327AB5;
-$navbar-color : #fff;
+// $navbar-color : #fff;
+$navbar-color : #2f79b9;
 $field-association-color:  #83bbed;
+$blue-material-color: #2f79b9;
+$gray-material-color: #f6f6f9; 
 
 * {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
+}
+
+html {
+  background: $gray-material-color; 
 }
 
 .content {

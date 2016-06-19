@@ -1,0 +1,14 @@
+.profile-content-bg {
+	@include content-background(300px);
+}
+
+.profile-card {
+	margin-top: 105px;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 0 0 10px black;
+
+	h2 {
+		margin-top: 0;
+	}
+}
