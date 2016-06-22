@@ -17,6 +17,30 @@ class Event::SlackIntegration
     notifier.ping I18n.t('slack_integration.new_event'), attachments: [attachment]
   end
 
+  def self.send_invite(email)
+    token = ENV['SLACK_TOKEN']
+    row_uri = ENV['SLACK_INVITE_URL']
+
+    uri = URI.parse(row_uri)
+    res = Net::HTTP.post_form(uri, email: email, token: token)
+
+    case res
+    when Net::HTTPOK
+      jsonRes = JSON.parse(res.body)
+      was_sent = jsonRes['ok']
+      error = jsonRes['error']
+      {
+        success: was_sent,
+        error: error
+      }
+    else
+      {
+        success: false,
+        error: res
+      }
+    end
+  end
+
   private
 
   def notifier

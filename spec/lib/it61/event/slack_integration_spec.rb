@@ -30,6 +30,14 @@ describe 'Event::SlackIntegration' do
     end
   end
 
+  describe '#send_invite' do
+    it 'determines whether invite was actually sent' do
+      email = 'dk@elonsoft.ru'
+      res = Event::SlackIntegration.send_invite email
+      expect(res[:success]).to be_in([true, false])
+    end
+  end
+
   def event_attributes
     {
       id: 18,
