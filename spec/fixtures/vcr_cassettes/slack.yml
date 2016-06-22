@@ -43,4 +43,69 @@ http_interactions:
       string: ok
     http_version: 
   recorded_at: Wed, 18 Nov 2015 18:15:48 GMT
-recorded_with: VCR 3.0.0
+- request:
+    method: post
+    uri: https://elonsoft.slack.com/api/users.admin.invite
+    body:
+      encoding: US-ASCII
+      string: email=test%40example.com&token=xoxp-23147432434-52787241587-52867490723-dc02c1aa29
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - elonsoft.slack.com
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Security-Policy:
+      - referrer no-referrer;
+      Date:
+      - Wed, 22 Jun 2016 09:03:20 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - client
+      X-Content-Type-Options:
+      - nosniff
+      X-Oauth-Scopes:
+      - identify,read,post,client,apps
+      X-Xss-Protection:
+      - '0'
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 8cdc69e06e564b9aef153cf0b52204b0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Y9mNLhbvMROVrz_FFn_1QJINWlmoPQGmQsaDKyTiwevX565fIWoECw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true}'
+    http_version: 
+  recorded_at: Wed, 22 Jun 2016 09:03:20 GMT
+recorded_with: VCR 3.0.3

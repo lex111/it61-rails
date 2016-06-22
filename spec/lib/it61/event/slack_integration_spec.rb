@@ -32,9 +32,11 @@ describe 'Event::SlackIntegration' do
 
   describe '#send_invite' do
     it 'determines whether invite was actually sent' do
-      email = 'dk@elonsoft.ru'
-      res = Event::SlackIntegration.send_invite email
-      expect(res[:success]).to be_in([true, false])
+      email = 'test@example.com'
+      VCR.use_cassette(*vcr_options) do
+        res = Event::SlackIntegration.send_invite email
+        expect(res[:success]).to eql(true)
+      end
     end
   end
 
