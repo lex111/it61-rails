@@ -7,9 +7,11 @@ default: &default
   reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
   timeout: 5000
 
+
 development:
   <<: *default
   url: <%= ENV.fetch("DATABASE_URL") %>_development
+  password: rostov
 
 test:
   <<: *default
