@@ -19,10 +19,6 @@ Rails.application.routes.draw do
     get page_name, to: "pages##{page_name}"
   end
 
-  %w(404).each do |code|
-    get code, to: "errors#code_#{code}"
-  end
-
   get "sign_up/complete", to: "users/profile#sign_up_complete"
   get "profile", to: "users/profile#profile"
 
@@ -50,4 +46,6 @@ Rails.application.routes.draw do
   draw :admin
 
   root "pages#welcome"
+
+  get "*any", via: :all, to: "errors#not_found"
 end

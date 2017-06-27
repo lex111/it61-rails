@@ -28,10 +28,12 @@
 
     @include media($tablet-screen-max) {
       display: inline-block;
+      position: absolute;
+      padding: 15px;
+      top: 0;
     }
   }
 
-  // TODO: Поменять на белое лого
   .logo {
     display: inline-block;
     vertical-align: bottom;
